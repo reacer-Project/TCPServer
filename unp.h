@@ -17,5 +17,6 @@ struct child_process_information{
 void child_process_function();
 int worker(int fd);
 
+typedef void (*task_function)(int,void*);
 
 #endif

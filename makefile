@@ -1,5 +1,5 @@
 CC=gcc
-CFLAGS= -g -Wall
+CFLAGS= -g -Wall -std=c99
 target=server client
 objects=read_fd.o write_fd.o send_fd.o recv_fd.o tcp_listen.o tcp_connect.o child_process_function.o worker.o
 $(target):server.o $(objects)

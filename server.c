@@ -68,6 +68,7 @@ int main(int argc,char **argv)
 					perror("send_fd error");
 					fprintf(stderr,"send_fd error");
 				}
+				printf("send a new client to child process %d\n",child_process[i].pid);
 				close(fd);
 			}
 		}
