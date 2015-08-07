@@ -22,7 +22,7 @@ int tcp_connect(const char *host,int port)
 	}
 	memset(&servaddr,0,sizeof(servaddr));
 	servaddr.sin_family = AF_INET;
-	servaddr.sin_port = port;
+	servaddr.sin_port = htons(port);
 	if(inet_pton(AF_INET,host,&servaddr.sin_addr)!=1)
 	{
 		perror("inet_pton error");
